@@ -1,7 +1,8 @@
-import { Spinner, Tasks, ThemeToggle, Todo } from '@microsoft/mgt-react';
+import { Providers, Spinner, Tasks, ThemeToggle, Todo } from '@microsoft/mgt-react';
 import './App.css';
-import { Agenda, EmailList, Login, PeoplePicker } from './components';
+import { AddCalendarEvent, Agenda, EmailList, Login, PeoplePicker } from './components';
 import useIsSignedIn from './hooks/useIsSignedIn';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [isSignedIn] = useIsSignedIn();
@@ -11,7 +12,8 @@ function App() {
       {
         isSignedIn && 
         <>
-          
+          <Agenda />
+          <AddCalendarEvent />
         </>
       }
     </div>

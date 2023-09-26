@@ -9,7 +9,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 Providers.globalProvider = new Msal2Provider({
   clientId: process.env.REACT_APP_MS_CLIENT_ID ?? '',
-  scopes: ['calendars.read', 'user.read', 'openid', 'profile', 'people.read', 'Chat.Create', 'Chat.Read', 'Mail.Read']
+  scopes: ['calendars.read', 'user.read', 'openid', 'profile', 'people.read', 'Chat.Create', 'Chat.Read', 'Mail.Read', 'Calendars.ReadWrite']
 });
 
 ReactDOM.render(
